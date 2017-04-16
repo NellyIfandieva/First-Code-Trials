@@ -1,0 +1,149 @@
+using System;
+					
+public class Program
+{
+//The user may insert up to 8 pairs of numbers, appoint an arithmetic operation for each pair and compare the four resulting numbers for a Top 4 Chart
+	public static void Main()
+	{
+		double resultOne = 0; // I use these at the end to compare the four resulting numbers
+		double resultTwo = 0;
+		double resultThree = 0;
+		double resultFour = 0;
+		
+		Console.Write("Please enter your first number: ");
+		double a = double.Parse(Console.ReadLine());
+		
+		Console.Write("Please enter your second number: ");
+		double b = double.Parse(Console.ReadLine());
+		
+		Console.Write("Please enter the operation: ");
+		char operationAB = char.Parse(Console.ReadLine());
+		
+		double aPlusB = a + b; //I use these for the operations switch
+		double aMinusB = a - b;
+		double bMinusA = b - a;
+		double aMultipliedB = a * b;
+		double aDividedB = a / b;
+		double bDividedA = b / a;
+		
+		switch(operationAB)
+		{
+    //resultOne derives from the user's choices of numbers and operation
+    
+			case '+': Console.WriteLine("The sum is {0}", resultOne = aPlusB); break;
+			case '-': if(a > b){Console.WriteLine("The difference is {0}", resultOne = aMinusB); break;}else{Console.WriteLine("The difference is {0}", resultOne = bMinusA); break;}
+			case '*': Console.WriteLine("The product is {0}", resultOne = aMultipliedB); break;
+			case '/': if(a > b){Console.WriteLine("The quotient is {0}", resultOne = aDividedB); break;}else{Console.WriteLine("The quotient is {0}", resultOne = bDividedA); break;}
+		}
+		
+    //To the second pair of numbers
+    
+		Console.Write("Please enter your third number: ");
+		double c = double.Parse(Console.ReadLine());
+		
+    Console.Write("Please enter your fourth number: ");
+		double d = double.Parse(Console.ReadLine());
+		
+		double cPlusD = c + d;
+		double cMinusD = c - d;
+		double dMinusC = d - c;
+		double cMultipliedD = c * d;
+		double cDividedD = c / d;
+		double dDividedC = d / c;
+		
+		Console.Write("Please enter operation: ");
+		char operationCD = char.Parse(Console.ReadLine());
+		
+		switch(operationCD)
+		{
+    //resultTwo changes according to the user's choices
+    
+			case '+': Console.WriteLine("The sum is {0}", resultTwo = cPlusD); break;
+			case '-': if(c > d){Console.WriteLine("The difference is {0}", resultTwo = cMinusD); break;}else{Console.WriteLine("The difference is {0}", resultTwo = dMinusC); break;}
+			case '*': Console.WriteLine("The product is {0}", resultTwo = aMultipliedB); break;
+			case '/': if(c > d){Console.WriteLine("The quotient is {0}", resultTwo = cDividedD); break;}else{Console.WriteLine("The quotient is {0}", resultTwo = dDividedC); break;}
+		}
+		
+		Console.Write("Please enter your fifth number: ");
+		double e = double.Parse(Console.ReadLine());
+		
+		Console.Write("Please enter your sixth number: ");
+		double f = double.Parse(Console.ReadLine());
+		
+		Console.Write("Please enter the operation: ");
+		char operationEF = char.Parse(Console.ReadLine());
+		
+		double ePlusF = e + f;
+		double eMinusF = e - f;
+		double fMinusE = f - e;
+		double eMultipliedF = e * f;
+		double eDividedF = e / f;
+		double fDividedE = f / e;
+		
+		switch(operationEF)
+		{
+    //resultThree will change according to the user's choice
+    
+			case '+': Console.WriteLine("The sum is {0}", resultThree = ePlusF); break;
+			case '-': if(c > d){Console.WriteLine("The difference is {0}", resultThree = eMinusF); break;}else{Console.WriteLine("The difference is {0}", resultThree = fMinusE); break;}
+			case '*': Console.WriteLine("The product is {0}", resultThree = eMultipliedF); break;
+			case '/': if(c > d){Console.WriteLine("The quotient is {0}", resultThree = eDividedF); break;}else{Console.WriteLine("The quotient is {0}", resultThree = fDividedE); break;}
+		}
+		
+		Console.Write("Please enter your next number: ");
+		double g = double.Parse(Console.ReadLine());
+		
+		Console.Write("Please enter your last number: ");
+		double h = double.Parse(Console.ReadLine());
+		
+		Console.Write("Please enter the operation: ");
+		char operationGH = char.Parse(Console.ReadLine());
+		
+		double gPlusH = g + h;
+		double gMinusH = g - h;
+		double hMinusG = h - g;
+		double gMultipliedH = g * h;
+		double gDividedH = d / h;
+		double hDividedG = h / g;
+		
+		switch(operationGH)
+		{
+    //resultFour will change now
+    
+			case '+': Console.WriteLine("The sum is {0}", resultFour = gPlusH); break;
+			case '-': if(c > d){Console.WriteLine("The difference is {0}", resultFour = gMinusH); break;}else{Console.WriteLine("The difference is {0}", resultFour = hMinusG); break;}
+			case '*': Console.WriteLine("The product is {0}", resultFour = gMultipliedH); break;
+			case '/': if(c > d){Console.WriteLine("The quotient is {0}", resultFour = gDividedH); break;}else{Console.WriteLine("The quotient is {0}", resultFour = hDividedG); break;}
+		}
+		
+    //The following aims at turning the decimals to whole numbers which then to compare
+    
+		double resultOneWhole = resultOne * 10000000000000000000;
+		double resultTwoWhole = resultTwo * 10000000000000000000;
+		double resultThreeWhole = resultThree * 10000000000000000000;
+		double resultFourWhole = resultFour * 10000000000000000000;
+    
+    //The comparison may probably be done in a easier manner, yet I wanted to complete this already
+		
+		bool greaterFirst = resultOne > resultTwo && resultOne > resultThree && resultOne > resultFour;
+		bool greaterSecond = resultTwo > resultOne && resultTwo > resultThree && resultTwo > resultFour;
+		bool greaterThird = resultThree > resultOne && resultThree > resultTwo && resultThree > resultFour;
+		
+		if(greaterFirst == true)
+		{
+			Console.WriteLine("{0} is the greatest number", resultOne);			
+		}
+		else if(greaterSecond == true)
+		{
+			Console.WriteLine("{0} is the greatest number", resultTwo);
+		}
+		else if(greaterThird == true)
+		{
+			Console.WriteLine("{0} is the greatest number", resultThree);
+		}
+		else
+		{
+			Console.WriteLine("{0} is the greatest number", resultFour);
+		}
+	}
+}
