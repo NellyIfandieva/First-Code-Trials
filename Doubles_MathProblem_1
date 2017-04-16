@@ -2,7 +2,8 @@ using System;
 					
 public class Program
 {
-//The user may insert up to 8 pairs of numbers, appoint an arithmetic operation for each pair and compare the four resulting numbers for a Top 4 Chart
+//The user may insert up to 8 pairs of numbers, appoint an arithmetic 
+operation for each pair and compare the four resulting numbers and show the biggest of them four
 	public static void Main()
 	{
 		double resultOne = 0; // I use these at the end to compare the four resulting numbers
