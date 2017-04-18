@@ -35,6 +35,7 @@ operation for each pair and compare the four resulting numbers and show the bigg
 			case '-': if(a > b){Console.WriteLine("The difference is {0}", resultOne = aMinusB); break;}else{Console.WriteLine("The difference is {0}", resultOne = bMinusA); break;}
 			case '*': Console.WriteLine("The product is {0}", resultOne = aMultipliedB); break;
 			case '/': if(a > b){Console.WriteLine("The quotient is {0}", resultOne = aDividedB); break;}else{Console.WriteLine("The quotient is {0}", resultOne = bDividedA); break;}
+			default: Console.WriteLine("Please insert \'+', \'-', \'*' or \'/'"); break;
 		}
 		
     //To the second pair of numbers
@@ -63,6 +64,7 @@ operation for each pair and compare the four resulting numbers and show the bigg
 			case '-': if(c > d){Console.WriteLine("The difference is {0}", resultTwo = cMinusD); break;}else{Console.WriteLine("The difference is {0}", resultTwo = dMinusC); break;}
 			case '*': Console.WriteLine("The product is {0}", resultTwo = aMultipliedB); break;
 			case '/': if(c > d){Console.WriteLine("The quotient is {0}", resultTwo = cDividedD); break;}else{Console.WriteLine("The quotient is {0}", resultTwo = dDividedC); break;}
+			default: Console.WriteLine("Please insert \'+', \'-', \'*' or \'/'"); break;
 		}
 		
 		Console.Write("Please enter your fifth number: ");
@@ -89,6 +91,7 @@ operation for each pair and compare the four resulting numbers and show the bigg
 			case '-': if(c > d){Console.WriteLine("The difference is {0}", resultThree = eMinusF); break;}else{Console.WriteLine("The difference is {0}", resultThree = fMinusE); break;}
 			case '*': Console.WriteLine("The product is {0}", resultThree = eMultipliedF); break;
 			case '/': if(c > d){Console.WriteLine("The quotient is {0}", resultThree = eDividedF); break;}else{Console.WriteLine("The quotient is {0}", resultThree = fDividedE); break;}
+			default: Console.WriteLine("Please insert \'+', \'-', \'*' or \'/'"); break;
 		}
 		
 		Console.Write("Please enter your next number: ");
@@ -115,6 +118,7 @@ operation for each pair and compare the four resulting numbers and show the bigg
 			case '-': if(c > d){Console.WriteLine("The difference is {0}", resultFour = gMinusH); break;}else{Console.WriteLine("The difference is {0}", resultFour = hMinusG); break;}
 			case '*': Console.WriteLine("The product is {0}", resultFour = gMultipliedH); break;
 			case '/': if(c > d){Console.WriteLine("The quotient is {0}", resultFour = gDividedH); break;}else{Console.WriteLine("The quotient is {0}", resultFour = hDividedG); break;}
+			default: Console.WriteLine("Please insert \'+', \'-', \'*' or \'/'"); break;
 		}
 		
     //The following aims at turning the decimals to whole numbers which then to compare
